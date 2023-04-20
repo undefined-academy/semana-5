@@ -45,7 +45,7 @@ emily.watson+notes@example.net
 
 ### Estructura del PR
 
-```js
+```text
 .
 └── exercises/
     └── glrodasz-0666/
