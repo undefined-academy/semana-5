@@ -43,12 +43,12 @@ class Student {
   
   calcularPromedios(estudiantesInfo);
   
-  function sumilla(arr){
-  let sumita = 0;
+  function sumarProm(arr){
+  let sum = 0;
   
   for(let i = 0; i < arr.length; i++){
-  sumita += arr[i].calificaciones;
+  sum += arr[i].calificaciones;
   
   }
   }
-  console.log(sumilla(estudiantesInfo));
+  console.log(sumarProm(estudiantesInfo));
