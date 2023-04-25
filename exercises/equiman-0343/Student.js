@@ -11,8 +11,8 @@ class Student {
         return `${this.#firstName} ${this.#lastName}`
     }
 
-    static fromObject() {
-        return {firstName: 'string', lastName: 'string' }
+    static fromObject({firstName = '', lastName = ''}) {
+        return console.table({firstName, lastName })
     }
 }
 
@@ -22,8 +22,7 @@ const expectedName = 'Camilo Martinez'
 console.log(expectedName)
 console.assert(completeName === expectedName, '%o', {expectedName, errorMsg: 'is not the expected full name'})
 
-const studentDefinition = Student.fromObject()
-console.table(studentDefinition)
+const studentDefinition = Student.fromObject({firstName: 'Alvaro', lastName: 'Capaceta'})
 
 
 const calcNotesAverage = (notes) => {
