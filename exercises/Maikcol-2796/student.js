@@ -8,7 +8,7 @@ class Student {
   getName() {
     return `${this.#name} ${this.#lastName}`;
   }
-  static spicies() {
+  static species() {
     return `It's human`;
   }
 }
