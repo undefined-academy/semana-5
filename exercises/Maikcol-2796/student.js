@@ -1,10 +1,12 @@
 class Estudiante {
+   #name
+   #lastName
   constructor(nombre, apellido) {
-    this.name = nombre;
-    this.lastName = apellido;
+    this.#name = nombre;
+    this.#lastName = apellido;
   }
   getName() {
-    return `${this.name} ${this.lastName}`;
+    return `${this.#name} ${this.#lastName}`;
   }
   static spicies() {
     return `Es un humano`;
