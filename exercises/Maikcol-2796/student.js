@@ -1,6 +1,6 @@
-class Estudiante {
-   #name
-   #lastName
+class Student {
+  #name
+  #lastName
   constructor(name, lastName) {
     this.#name = name;
     this.#lastName = lastName;
@@ -35,7 +35,6 @@ async function calculateAverages(students) {
   }
   return averages;
 }
-student
 calculateAverages(studentsInfo)
   .then((response) => {
     students = Object.entries(response);
