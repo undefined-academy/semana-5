@@ -37,7 +37,7 @@ class Estudiante {
 // Función asíncrona para calcular los promedios de calificaciones al cuadrado dado un array de estudiantes
 async function calcularPromedios(estudiantes) {
     try {
-        const promedios = estudiantes.map(async (estudiante) => {
+        const promedios = estudiantes.map((estudiante) => {
             const promedio = estudiante.calificaciones.reduce((acumulador, calificacion) => acumulador + calificacion ** 2, 0) / estudiante.calificaciones.length;
             
             return { 
