@@ -1,10 +1,10 @@
-function main () {
+function counter () {
  for (var i=1; i<= 10; i++){
-  function a (j) {
+  function clousure (j) {
     setTimeout(()=>console.log(j), 1000*j);
   }
-   a(i);
+   clousure(i);
 }
 
 }
-main()
+counter()
