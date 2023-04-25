@@ -1,42 +1,42 @@
 class Estudiante {
    #name
    #lastName
-  constructor(nombre, apellido) {
-    this.#name = nombre;
-    this.#lastName = apellido;
+  constructor(name, lastName) {
+    this.#name = name;
+    this.#lastName = lastName;
   }
   getName() {
     return `${this.#name} ${this.#lastName}`;
   }
   static spicies() {
-    return `Es un humano`;
+    return `It's human`;
   }
 }
-const estudiantesInfo = [
-  { nombre: "Ana", apellido: "García", calificaciones: [3, 5, 4, 4.5] },
-  { nombre: "Luis", apellido: "Pérez", calificaciones: [4.5, 4, 4, 5] },
+const studentsInfo = [
+  { name: "Ana", lastName: "García", grades: [3, 5, 4, 4.5] },
+  { name: "Luis", lastName: "Pérez", grades: [4.5, 4, 4, 5] },
 ];
 
-async function calcularPromedios(estudiantes) {
-  let promedios = {};
-  for (let estudiante of estudiantes) {
-    let promedio;
-    let acumulado = 0;
-    let name = `${estudiante.nombre} ${estudiante.apellido}`;
+async function calculateAverages(students) {
+  let averages = {};
+  for (let student of students) {
+    let average;
+    let accumulated = 0;
+    let name = `${student.name} ${student.lastName}`;
 
-    for (let nota of estudiante.calificaciones) {
-      acumulado += nota;
+    for (let grade of student.grades) {
+      accumulated += grade;
     }
 
-    promedio = acumulado / estudiante.calificaciones.length;
+    average = accumulated / student.grades.length;
 
-    let promedioCuadrado = promedio ** 2;
-    promedios[name] = promedioCuadrado;
+    let averageSquare = average ** 2;
+    averages[name] = averageSquare;
   }
-  return promedios;
+  return averages;
 }
-
-calcularPromedios(estudiantesInfo)
+student
+calculateAverages(studentsInfo)
   .then((response) => {
     students = Object.entries(response);
     for (let d of students) {
