@@ -31,7 +31,11 @@ function showAveragePerStudent(list) {
       lastName
     });
 
-    const totalScore = scores.reduce((ant, curr) => ant + curr);
+    const scoreSquare = scores.map(score => {
+      return score ** 2;
+    })
+
+    const totalScore = scoreSquare.reduce((ant, curr) => ant + curr);
 
     const averageScore = (totalScore / scores.length).toFixed(2);
     
