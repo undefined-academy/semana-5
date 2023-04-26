@@ -40,11 +40,11 @@ const getAverage = async (students) => {
   for (const studentObject of students) {
     const { grades } = studentObject;
     const student = Student.fromObject(studentObject);
-    const gradesSquared = await grades.map((grade) => {
+    const gradesSquared = grades.map((grade) => {
       return grade ** 2;
     });
 
-    const gradesAmount = await gradesSquared.reduce(sumGrades, 0);
+    const gradesAmount = gradesSquared.reduce(sumGrades, 0);
     const average = gradesAmount / gradesSquared.length;
 
     const fullname = student.fullName;
@@ -57,7 +57,7 @@ const getAverage = async (students) => {
 
 const getStudentsAverage = async (students) => {
   try {
-    const studentsAverage = await getAverage(students);
+    const studentsAverage = getAverage(students);
     console.log(studentsAverage);
   } catch (error) {
     console.log(error);
