@@ -5,7 +5,7 @@ function print(i) {
 }
 
 function printCountTo10() {
-    for (let index = 0; index < 10; index++) {
+    for (let index = 1; index <= 10; index++) {
         setTimeout(()=> {
             print(index);
         }, index * ONE_SEC_IN_MS)
