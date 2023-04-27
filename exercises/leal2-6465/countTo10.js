@@ -1,7 +1,7 @@
 // exercise 1
 let count = 1;
 const ONE_SECOND_MS = 1000;
-const interval = setInterval( () => {
+const interval = setInterval(() => {
   console.log(count);
   count++;
 

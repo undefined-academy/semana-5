@@ -4,8 +4,8 @@ const studentData = [
 ];
 
 class Student {
-    #name
-    #lastname
+  #name;
+  #lastname;
   constructor(name, lastname, qualifications) {
     this.#name = name;
     this.#lastname = lastname;
@@ -23,11 +23,11 @@ class Student {
 }
 
 function calcular(score) {
-    return (((score.reduce((acum,score)=>acum+score)) / score.length)**2)
+  return (score.reduce((acum, score) => acum + score) / score.length) ** 2;
 }
 
 const newStudents = studentData.map((data) => Student.fromObject(data));
 newStudents.forEach((obj) => {
-    let scores = calcular(obj.qualifications)
-    console.log(`${obj.fullName}my score is ${scores.toFixed(2)}`);
+  let scores = calcular(obj.qualifications);
+  console.log(`${obj.fullName}my score is ${scores.toFixed(2)}`);
 });

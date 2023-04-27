@@ -10,6 +10,7 @@ const emailMap = (mail) => {
     return fullMail.replace(subAddress, "");
   }
 };
+
 function EmailValidCheck(emailList) {
   if (!Array.isArray(emailList)) {
     const ListOfEmails = emailList.split(" ");
@@ -23,6 +24,6 @@ const Mails =
   "john.doe@example.com jane_doe+shopping@example.org alice.smith+work@example.co.uk charlie.brown+newsletter@example.io emily.watson+notes@example.net john.doeexample.com john.doe@examplecom";
 
 const emailListTest = Mails.split(" ");
-// EmailValidCheck(Mails)
+console.log(EmailValidCheck(Mails));
 
 console.log(EmailValidCheck(emailListTest));
