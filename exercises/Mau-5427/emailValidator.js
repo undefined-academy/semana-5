@@ -15,7 +15,7 @@ const emailValidation = (list) => {
     return validEmailRegExp.test(entry);
   })
   
-  return validEmails.map(entry => entry.replace(subAdresRegExp))
+  return validEmails.map(entry => entry.replace(subAdresRegExp, ""))
 }
 
 console.log(emailValidation(emailList));
