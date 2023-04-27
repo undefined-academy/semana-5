@@ -29,27 +29,3 @@ const emailList = [
   }
   
   filterValidEmails()
-
-
-// VERSION GUILLERMO
-
-
-const emailRegex = /^[\w.-]+(\+[\w.-]+)?@[\w-]+\.[\w]{2,5}/;
-
-const newMailList = [
-  "john.doe.example.com", 
-   "me-mail@lucianogarriga.com",  
-  "me+netflix@gmail.com",  "joseswitch+youtube@hotmail.com", "fernando+twitch@spacemonkeys.com"]
-
-const filterEmails = email => email.match(emailRegex);
- 
-const mapEmails = email => {
-  const [fullEmail, subaddressing] = email.match(emailRegex)
-  if(subaddresing){
-    return fullEmail.replace(subaddresing, "")
-  }
-}
- 
-email
-  .filter(filterEmails)
-  .map(mapEmails)
