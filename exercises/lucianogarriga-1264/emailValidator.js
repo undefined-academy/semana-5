@@ -28,4 +28,4 @@ const emailList = [
     return validEmails;
   }
   
-  filterValidEmails()
+  console.log("Los correos válidos son los siguientes: " + filterValidEmails())
