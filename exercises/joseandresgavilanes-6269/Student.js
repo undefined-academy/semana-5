@@ -7,7 +7,7 @@ class Student {
         this.#lastName = lastName
     }
 
-    getFullName() {
+    getStudentFullName() {
         return `${this.#firstName} ${this.#lastName}`
     }
 
@@ -16,22 +16,22 @@ class Student {
     }
 }
 
-const firstStudent = new Student('Camilo', 'Martinez')
-const completeName = firstStudent.getFullName()
-const expectedName = 'Camilo Martinez'
+const firstStudent = new Student('Jose', 'Gavilanes')
+const completeName = firstStudent.getStudentFullName()
+const expectedName = 'Jose Gavilanes'
 console.log(expectedName)
 console.assert(completeName === expectedName, '%o', {expectedName, errorMsg: 'is not the expected full name'})
 
 const studentDefinition = Student.fromObject({firstName: 'Alvaro', lastName: 'Capaceta'})
 
 
-const calcNotesAverage = (notes) => {
+const calculateAverageGrade = (notes) => {
     const averageNotesPowered = (notes.reduce((acc, act) => acc + act) / notes.length) ** 2
     return Math.round(averageNotesPowered)
 }
 
-const calcStudentsAverage = async (students) => {
-    return students.map((student) => ({...student, average: calcNotesAverage(student.notes)}))
+const calculateStudentsAverage = async (students) => {
+    return students.map((student) => ({...student, average: calculateAverageGrade(student.notes)}))
 }
 
 const printStudentsAverage = (students) => {
@@ -70,7 +70,7 @@ const assertionTest = (students) => {
 }
 
 (async () => {
-    const students = await calcStudentsAverage(studentsInfo)
+    const students = await calculateStudentsAverage(studentsInfo)
     printStudentsAverage(students)
     assertionTest(students)
 })()

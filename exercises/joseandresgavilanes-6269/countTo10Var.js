@@ -1,4 +1,4 @@
-const counter = () => {
+const counterToTenVar = () => {
     const SEC_IN_MS = 1000
 
     const timer = (number) => {
@@ -11,4 +11,4 @@ const counter = () => {
     }
 }
 
-counter()
+counterToTenVar()

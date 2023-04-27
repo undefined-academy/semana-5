@@ -1,4 +1,4 @@
-const counter = () => {
+const counterToTen = () => {
     const SEC_IN_MS = 1000
 
     for (let i = 1; i <= 10; i++) {
@@ -9,4 +9,4 @@ const counter = () => {
     }
 }
 
-counter()
+counterToTen()
