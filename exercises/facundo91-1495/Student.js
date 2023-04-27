@@ -34,7 +34,7 @@ function calculateAverage(students) {
             average: average?.toFixed(2) ?? "N/A",
         }
     })
-    average.array.forEach(({fullName, average}) => {
+    average.forEach(({fullName, average}) => {
         console.log(`${fullName}: ${average}`);
     }) 
 }

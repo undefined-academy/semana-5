@@ -1,4 +1,4 @@
-const emailRegex =  /^[\W.-]+(\+[\W.-]+)?@[\W-]+\.[\W]{2,7}$/
+const emailRegex =  /^[\w.-]+(\+[\w.-]+)?@[\w-]+\.[\w]{2,7}$/
 
 const emails = [
     "john.doe@example.com.com",
@@ -14,7 +14,7 @@ const filterEmails = email => email.match(emailRegex);
 
 //"jone_doe+shopping@example.org".match(emailRegex);
 
-const mapEmail = email => {
+const mapEmails = email => {
     const [fullEmail, subaddressing] = email.match(emailRegex)
 
     if(subaddressing) {
@@ -24,4 +24,4 @@ const mapEmail = email => {
     return fullEmail
 }
 
-emails.filter(filterEmails).map(mapEmail);
+emails.filter(filterEmails).map(mapEmails);
