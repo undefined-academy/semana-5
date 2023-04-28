@@ -1,13 +1,13 @@
 // const ONE_SEC_IN_MS = 1000
 
-function printNumbers(num, callback) {
-    for (var i = 1; i < (num + 1); i++)
-        setTimeout(function () {
-            callback(i)
-        }, i * ONE_SEC_IN_MS)
-}
+// function printNumbers(num, callback) {
+//     for (var i = 1; i < (num + 1); i++)
+//         setTimeout(function () {
+//             callback(i)
+//         }, i * ONE_SEC_IN_MS)
+// }
 
-printNumbers(10, console.log)
+// printNumbers(10, console.log)
 
 // 11 - 11 - 11 ... porque con var modifica la variable de forma global
 // seTimeout(i = 1, i = 1 * 1000)

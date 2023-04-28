@@ -26,11 +26,3 @@ console.log(emailList
     .filter(filterEmails)
     .map(mapEmails)
 )
-
-
-
-
-
-
-
-

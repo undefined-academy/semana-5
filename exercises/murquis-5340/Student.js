@@ -23,9 +23,6 @@ class Estudiante {
     }
 }
 
-// const marcos = new Estudiante ("Marcos", "Losada")
-// marcos.nombreCompleto
-
 async function calcularPromedios(estudiantes){
 
     const promedios = estudiantes.map(({nombre, apellido, calificaciones}) => {
@@ -44,7 +41,6 @@ async function calcularPromedios(estudiantes){
         console.log(`${nombreCompleto}: ${promedio}`);
     })
 }
-
 
 
 calcularPromedios(estudiantesInfo)
