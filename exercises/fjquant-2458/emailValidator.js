@@ -7,7 +7,7 @@ const emails=[
     "gabyasturiabibllioteca.com"
 ]
 
-const emailregex = /^[\w.]+(\+[\w]+)?@[\w]+\.[\w]{2,7}$/
+const emailregex = /^[\w.]+(\+[\w]+)?@[\w]+\.[\w]{2,7}(\.[\w]{2})?/
 
 const filterEmail = email => email.match(emailregex)
 
