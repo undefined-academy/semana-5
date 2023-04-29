@@ -39,7 +39,7 @@ function calculateAverage(students) {
 
         return {
             fullname: student.fullname,
-            averages: average?.toFixed(2) ?? "N/A"
+            averages: (average**2)?.toFixed(2) ?? "N/A"
         }
 
     })
