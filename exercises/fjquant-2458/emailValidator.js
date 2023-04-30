@@ -5,9 +5,10 @@ const emails=[
     "charlie.brown+newletter@example.io", 
     "emily.watson+notes@example.net",
     "gabyasturiabibllioteca.com"
+    "felipe-quant@example.com"
 ]
 
-const emailregex = /^[\w.]+(\+[\w]+)?@[\w]+\.[\w]{2,7}(\.[\w]{2})?$/
+const emailregex = /^[\w.-]+(\+[\w.-]+)?@([\w-]+)(\.[\w]{2,7})+$/
 
 const filterEmail = email => email.match(emailregex)
 
