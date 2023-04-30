@@ -1,4 +1,4 @@
-emails = [
+const emails = [
     "john.doe@example.com",
     "jane_doe+shopping@example.org",
     "alice.smith+work@example.co.uk",
