@@ -49,6 +49,3 @@ function calcularPromedios(estudiantes) {
 }
 
 calcularPromedios(estudiantesInfo);
-
-// const estudiantes = new Estudiante("Daniel", "Lozano");
-// console.log(estudiantes.fullName);
