@@ -5,23 +5,15 @@ pero usando un ciclo for con var en lugar de let
 
 const ONE_SECOND_IN_MILISECONDS = 1000
 
-function printNumber(number) {
-    console.log(`${number}`)
-}
+const consoleLog = x => console.log(`${x}`)
 
-for(var i=1; i<=10; i++){
-    setTimeout(printNumber, ONE_SECOND_IN_MILISECONDS * i)
-}
+// Hacemos uso de closure para encapsular i
 
-/*Arroja esto
-undefined
-undefined
-undefined
-undefined
-undefined
-undefined
-undefined
-undefined
-undefined
-undefined
-*/
+for(var i=1; i<=10; i ++){
+    function showValue(i){
+        return function() {
+            consoleLog(i) 
+        } 
+    }
+    setTimeout(showValue(i), ONE_SECOND_IN_MILISECONDS * i)
+}

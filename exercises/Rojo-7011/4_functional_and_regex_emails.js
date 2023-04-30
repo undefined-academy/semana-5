@@ -6,7 +6,9 @@
 
 const emailPattern = /^[\w.!#$%&’*+\-\/=?\^`{|}~]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*$/i
 
-emails = [
+// Emails de prueba
+
+const emails = [
     "john.doe@example.com",
     "jane_doe+shopping@example.org",
     "alice.smith+work@example.co.uk",
