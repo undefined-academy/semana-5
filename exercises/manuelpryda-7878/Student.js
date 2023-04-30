@@ -43,7 +43,7 @@ class Student {
         name, lastname
       })
       
-      const scoresSum = scores.reduce((acum, score) => acum + score, 0)
+      const scoresSum = scores.reduce((acum, score) => acum + score **2, 0)
       
       const average = scoresSum / scores.length;
       
