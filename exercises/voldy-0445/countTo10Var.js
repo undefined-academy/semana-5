@@ -11,4 +11,4 @@ function main(){
     }
 }
 
-main ()
+main ();
