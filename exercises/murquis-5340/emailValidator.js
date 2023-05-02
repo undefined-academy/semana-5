@@ -7,13 +7,13 @@ const emailList = [
 ]
 
 //Regex puede devolver grupos coincidentes con los parentesis
-const emailPattern = /^[\w.-]+(\+[\w.-]+)?@[\w-]+\.[\w]{2,7}$/;
+const emailPattern = /^[\w.-]+(\+[\w.-]+)?@[\w-]+(\.[\w]{2,7})+$/;
 
 const filterEmails = email => email.match(emailPattern)
 
 const mapEmails = email => {
     // Al saber que el regex me puede devolver 2 grupos, los puedo recoger directamente
-    const [fullEmail, subaddressing] = email.match(emailPattern)
+    const [fullEmail, subaddressing, grup] = email.match(emailPattern)
 
     if(subaddressing){
         return fullEmail.replace(subaddressing, "")
