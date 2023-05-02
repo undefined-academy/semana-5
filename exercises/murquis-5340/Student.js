@@ -29,7 +29,8 @@ async function calcularPromedios(estudiantes){
         const estudiante = Estudiante.fromObject({
             nombre, apellido
         })
-        const sumaCalificaciones = calificaciones.reduce((acumulador, calificacion) => acumulador + calificacion ** 2)
+
+        const sumaCalificaciones = calificaciones.reduce((acumulador, calificacion) => acumulador + calificacion ** 2,0)
         const promedio = sumaCalificaciones / calificaciones.length;
 
         return{
