@@ -38,7 +38,7 @@ function calculateAverage(students) {
 
         const scoresSum = scores.reduce((accumulator, score) => accumulator + score)
 
-        const average = scoresSum/scores.length;
+        const average = (scoresSum/scores.length)**2;
 
         return {
             fullname: student.fullName,
@@ -61,6 +61,7 @@ calculateAverage(studentsInfo);
 
 /*
 Pop Eyes
-Ana Garcia: 4.13
-Luis Perez: 4.38
+Ana Garcia: 17.02
+Luis Perez: 19.14
 */
+
