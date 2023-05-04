@@ -23,10 +23,9 @@ const studentsInfo = [
 ];
 
 function calculateAverage(students){
-    const averages = students.map(({
-        name, lastname, scores}) => {
+    const averages = students.map(({ name, lastname, scores}) => {
 
-            const student = Student.fromObjet({
+            const student = Student.fromObject({
                 name, lastname
             })
             const scoresSum = scores.reduce((acum, score) => acum + score)
