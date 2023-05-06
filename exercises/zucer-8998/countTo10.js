@@ -1,15 +1,13 @@
 const ONE_SECOND_IN_MILLISECONDS = 1_000;
 
-
-const printInOneSecond = (value) => {
-    setTimeout(() => console.log(value), ONE_SECOND_IN_MILLISECONDS * value)
-}
-
+// Lo hago de esta forma solo para mostrar otra forma de solucionar el problema
 
 const main = () => {
-    for (let i = 1; i <= 10; i = i + 1) {
-        printInOneSecond(i)
-    }
+    Array(10).fill('').forEach((_, index) => {
+        setTimeout(
+            () => console.log(index + 1), ONE_SECOND_IN_MILLISECONDS * (index + 1)
+        )
+    }) 
 }
 
 main()
