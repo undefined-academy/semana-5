@@ -1,0 +1,21 @@
+{
+  "name": "santana-5450",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.7"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "sass": "^1.62.1",
+    "vite": "^4.3.3"
+  },
+  "description": ""
+}
