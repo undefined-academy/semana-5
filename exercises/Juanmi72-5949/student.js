@@ -13,7 +13,6 @@ class Student {
         const {name, lastname} = obj;
         return new Student(name, lastname);
     }   
-    
 
 }
 
@@ -29,7 +28,7 @@ let student = Student.fromObjet(obj);
 console.log(student);
 
 
-async function calcularPromedio(arrayStudent){
+async function calculateAverage(arrayStudent){
     return new Promise((resolve, reject) => {
         if (Array.isArray(arrayStudent)) {
             resolve(arrayStudent);
@@ -47,7 +46,7 @@ async function calcularPromedio(arrayStudent){
     });
 }
 
-calcularPromedio(studentsInfo)
+calculateAverage(studentsInfo)
     .then(result => console.log(result))
     .catch(result => console.log('Error'))
     .finally(result=> console.log('finalizada la promesa'));
