@@ -36,7 +36,7 @@ function calcularPromedios(estudiantes) {
     })
 
     promedios.forEach(({ nombreCompleto, promedio }) => {
-        console.log(`${nombreCompleto}: ${promedio}`)
+        console.log(`${nombreCompleto}: ${promedio ** 2}`)
     });
 }
 
