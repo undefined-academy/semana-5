@@ -23,6 +23,33 @@ const studentsInfo = [
         { name: "Luis", lastname:"Pérez", scores: [4.5, 4 ,4, 5] },
     ];
 
+
 let obj = {name: "Ana", lastname:"García"};
 let student = Student.fromObjet(obj);
 console.log(student);
+
+
+async function calcularPromedio(arrayStudent){
+    return new Promise((resolve, reject) => {
+        if (Array.isArray(arrayStudent)) {
+            resolve(arrayStudent);
+            // Calcular el average de las calificaciones al cuadrado 
+            const average = arrayStudent.map((student) => {
+                const {name, lastname, scores} = student;
+                const sum = scores.reduce((acc, score) => acc + score*score, 0);
+                console.log(`El Estudiante ${name} ${lastname} tiene un promedio al cuadrado de ${Math.round(sum/scores.length)}`)
+                return sum/scores.length;
+            }
+            );
+        } else {
+            reject(new Error('El valor ingresado no es un array'));
+        }
+    });
+}
+
+calcularPromedio(studentsInfo)
+    .then(result => console.log(result))
+    .catch(result => console.log('Error'))
+    .finally(result=> console.log('finalizada la promesa'));
+
+console.log(typeof(studentsInfo));
