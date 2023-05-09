@@ -38,7 +38,7 @@ function calculateAverage(students) {
 
         const scoresSum = scores.reduce((accumulator, score) => accumulator + score)
 
-        const average = (scoresSum/scores.length)**2;
+        const average = scoresSum/scores.length;
 
         return {
             fullname: student.fullName,
@@ -49,7 +49,7 @@ function calculateAverage(students) {
         })
 
         averages.forEach(({fullname, average}) => {
-            console.log(`${fullname}: ${average}`);
+            console.log(`The student: ${fullname} got ${(average**2).toFixed(2)}`);
 
     })
 
