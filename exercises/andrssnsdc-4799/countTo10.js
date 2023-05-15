@@ -7,4 +7,4 @@ function contador (){
       if (numeroActual > 10) {clearInterval(intervalo)}
       }, segundo_en_miliseguntos)
   }
-  contador()
+  contador() 
