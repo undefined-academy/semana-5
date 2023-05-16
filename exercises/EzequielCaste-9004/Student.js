@@ -24,7 +24,8 @@ async function calcularPromedios(studentList) {
 
   for (student of studentList) {
     let aux = 0;
-    const studentAux = new Student(student.nombre, student.apellido);
+
+    const studentAux = Student.fromObject(student);
 
     for (note of student.calificaciones) {
       aux = aux + note      
