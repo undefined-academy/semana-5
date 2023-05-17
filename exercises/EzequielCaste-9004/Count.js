@@ -5,21 +5,12 @@ del 1 al 10, un número cada segundo.
  */
 
 const ONE_SEC_IN_MS = 1000;
-let number = 1;
 
 function printNumbers() {
-  console.log(number)
-  
-  if (number === 10) {
-    return;
+  for (let i = 1; i <= 10; i++) {
+    function imprimir() { console.log(i) }
+    setTimeout(imprimir, i * ONE_SEC_IN_MS);
   }
-
-  number = number + 1
-
-  setTimeout(function () {
-    printNumbers();
-  }, 1 * ONE_SEC_IN_MS);
-
 }
 
 printNumbers();
