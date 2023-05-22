@@ -23,6 +23,7 @@ class Student {
     this.#scores = scores;
   }
 
+  //Returning fullName with string literals
   getFullName() {
     return `${this.#firstName} ${this.#lastName}`;
   }
@@ -55,7 +56,7 @@ class Student {
       : true;
   }
 
-  static calculateAverageListStudents(students) {
+  static async calculateAverageListStudents(students) {
     return students.map((student) => ({
       fullName: student.getFullName(),
       scoreAverage: student.getAverageScore(),
@@ -89,4 +90,6 @@ console.log(Student.isValid(studentsInfo[1]));
 console.log(
   "* Testing exercise for the method that calculates average score for each student in a list"
 );
-console.log(Student.calculateAverageListStudents(listStudents));
+Student.calculateAverageListStudents(listStudents).then((data) =>
+  console.log(data)
+);
