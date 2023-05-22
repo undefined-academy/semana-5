@@ -19,7 +19,7 @@ class Student {
 
 const studentsInfo = [
     { name: "Ana", lastname: "Garcia", scores: [3, 5, 4, 4.5] },
-    { name: "Luis", lastname: "Perez", scores: [4.5, 4, 4, 5] }
+    { name: "Jorge", lastname: "Perez", scores: [4.5, 4, 4, 5] }
 ];
 
 function calculateAverage(students) {
