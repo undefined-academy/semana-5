@@ -56,10 +56,10 @@ class Student {
       : true;
   }
 
-  static async calculateAverageListStudents(students) {
+  static async calculateSquareAverageListStudents(students) {
     return students.map((student) => ({
       fullName: student.getFullName(),
-      scoreAverage: student.getAverageScore(),
+      scoreSquareAverage: student.getAverageScore() ** 2,
     }));
   }
 }
@@ -90,6 +90,6 @@ console.log(Student.isValid(studentsInfo[1]));
 console.log(
   "* Testing exercise for the method that calculates average score for each student in a list"
 );
-Student.calculateAverageListStudents(listStudents).then((data) =>
+Student.calculateSquareAverageListStudents(listStudents).then((data) =>
   console.log(data)
 );
