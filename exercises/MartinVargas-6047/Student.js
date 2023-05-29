@@ -39,4 +39,3 @@ function calculateAverage(students) {
     });
   }
   calculateAverage(studentsInfo);
-  
