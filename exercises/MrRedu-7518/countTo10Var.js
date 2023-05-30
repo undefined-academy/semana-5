@@ -5,15 +5,18 @@
 
 let ONE_SEC_IN_MS = 1000;
 function increment() {
-
-    let number = 1;
-      // ¿Esto es trampa? 🤔🙄 jajajaja
   
     for (var i = 1; i <= 10; i++) {
+
+      let number = i;
+      // Los primitivos son copiados por valor, asi que realmente obtenemos una copia independiente de la "i" usado en el bucle
+
+      // Se explica en el último ejercicio de:
+      // https://es.javascript.info/closure#ambito-o-alcance-lexico
+
       let imprimir = () => console.log(number++)
       setTimeout(imprimir, ONE_SEC_IN_MS * i)
     }
-  
 }
 increment()
   
