@@ -1,3 +1,6 @@
+// Clase 4, semana 5
+// Función que lea un array de correos y filtre los correos validos
+
 let regExp = /^\w{3,16}(\.\w{2,12})?@([a-z]{2,12})((\.|\+)[a-z]{2,6})?$/
 
 const emails =  [
