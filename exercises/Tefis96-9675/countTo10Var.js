@@ -3,11 +3,11 @@
 const oneSeg = 1000;
 
 function numberCount(number) {
-    for (var i = number; i >= 1; i--) {
+    for (var i = 1; i <= number; i++) {
         let count = i;
         setTimeout(() => {
             console.log(count);
-        }, (number - i) * oneSeg, i);
+        }, (i+1) * oneSeg, i);
     }
 }
 

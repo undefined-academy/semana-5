@@ -2,10 +2,10 @@
 const oneSeg = 1000;
 
 function numberCount(number) {
-    for (let i = number; i >= 1; i--) {
+    for (let i = 1; i <= number; i++) {
         setTimeout(() => {
             console.log(i);
-        }, (10 - i) * oneSeg);
+        }, ( i+1) * oneSeg);
     }
 }
 
