@@ -1,0 +1,16 @@
+for (var i = 0; i <= 10; i++) {
+  setTimeout(
+    function () {
+      console.log(this.i);
+    }.bind({ i: i }),
+    1000 * i
+  );
+}
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+  var test = 0;
+  setTimeout(() => {
+    test = test + 1;
+    console.log(test);
+  }, 1000 * i);
+}
