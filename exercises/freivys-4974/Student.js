@@ -1,8 +1,10 @@
+// Arreglo de estudiante
 const studentInfo = [
   { name: 'Ana', lastname: 'García', score: [3, 5, 4, 4.5] },
   { name: 'Luis', lastname: 'Pérez', score: [4.5, 4, 4, 5] },
 ];
 
+// Clase Student con propiedades privadas (name, lastname)
 class Student {
   #name;
   #lastname;
@@ -16,12 +18,14 @@ class Student {
     return `${this.#name} ${this.#lastname}`;
   }
 
+  // Método estático fromObject que crea una instancia de la clase Student a partir de un objeto.
   static fromObject(obj) {
     const { name, lastname } = obj;
     return new Student(name, lastname);
   }
 }
 
+// La función procesa cada objeto en el arreglo y calcula el promedio de la puntuación
 function average(params) {
   let average;
   const averages = params.map(({ name, lastname, score }) => {
