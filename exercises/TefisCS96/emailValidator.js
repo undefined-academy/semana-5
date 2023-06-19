@@ -1,6 +1,5 @@
 //Crear una funcionalidad que lea una lista de correos y filtre
 // los correos validos y remueva la cadena de texto de subaddresing.
-
 const emails = [
     'john.doe@example.com',
     'jane_doe+shopping@example.org',
@@ -17,15 +16,11 @@ const emails = [
     'john.doe@',                         
     'john.doe',
 ]
-
 function validatorEmail(email) {
     const regex = /^[\w.]+(\+[\w.-]+)?@[\w-]+\.[\w]{2,7}$/;
     const resutl = email
         .filter((email) => regex.test(email))
         .map((email) => email.replace(/\+.*(?=@)/g, ''))
-
     return console.log(resutl)
-
 }
-
 validatorEmail(emails)
