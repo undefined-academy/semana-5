@@ -14,7 +14,7 @@ class Student {
 
     static fromObject(obj) {    
         const {name, lastName} = obj;        
-        return new Student(nombre, apellido);
+        return new Student(name, lastName);
     }
 }
 
@@ -24,9 +24,9 @@ const studentsInfo = [
 ]
 
 function calculateAverages(students) {
-    const averages = students.map(({ name, lastname, grades }) => {   
+    const averages = students.map(({ name, lastName, grades }) => {   
         const student = Student.fromObject({ name, lastName })  
-        const averagesSum = grtades.reduce((acum, grade) => acum + grade, 0)  
+        const averagesSum = grades.reduce((acum, grade) => acum + grade, 0)  
         const average = averagesSum / grades.length;
 
         return {
@@ -35,7 +35,7 @@ function calculateAverages(students) {
         }
     })
 
-    average.forEach(({ fullName, average }) => {
+    averages.forEach(({ fullName, average }) => {
         console.log(`${fullName}: ${average ** 2}`)
     });
 }
