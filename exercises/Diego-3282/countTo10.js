@@ -1,10 +1,10 @@
-const ONE_SECONDS = 2000;
+const ONE_SECOND = 1000;
 
 function returnCounterAferter1sec(counter) {
   return new Promise(function (resolve) {    
     setTimeout(() => {
       resolve(counter);
-    }, ONE_SECONDS);
+    }, ONE_SECOND);
   });
 }
 
