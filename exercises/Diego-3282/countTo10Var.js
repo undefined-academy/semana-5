@@ -1,4 +1,4 @@
-const ONE_SECONDS = 2000;
+const ONE_SECONDS = 1000;
 
 function countTo10() {
   for (var i = 1; i <= 10; i++) {
