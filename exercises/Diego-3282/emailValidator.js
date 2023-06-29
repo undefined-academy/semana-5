@@ -1,4 +1,4 @@
-const listofemails = [
+const listOfEmails = [
   "john.doe@example.com",
   "jane_doe+shopping@example.org",
   "alice.smith+work@example.co.uk",
@@ -17,6 +17,6 @@ function validateEmail(email) {
 }
 
 
-let emailsValidatedSubaddressing = listofemails.filter(validateEmail).map(removeemailsubaddresing);
+let emailsValidatedSubaddressing = listOfEmails.filter(validateEmail).map(removeemailsubaddresing);
 
 console.log(emailsValidatedSubaddressing);

@@ -27,7 +27,7 @@ function calculateAverage(students) {
     const student = Student.fromObject({ nombre, apellido });
 
     const scoresSum = calificaciones.reduce(
-      (total, califiacion) => total + califiacion ** 2
+      (total, calificacion) => total + calificacion ** 2
     );
 
     const promedio = scoresSum / calificaciones.length;
