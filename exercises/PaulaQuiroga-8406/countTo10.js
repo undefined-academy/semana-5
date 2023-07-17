@@ -18,5 +18,14 @@ function main() {
 
 main();
 
+// Otra forma con Promise 
 
+async function imprimirCadaUnSegundo () {
+    const ONE_SEC_IN_MS = 1000;
+    for (let i = 1; i <= 10; i++) {
+        await new Promise (resolve => setTimeout(resolve, ONE_SEC_IN_MS));
+        console.log(i);
+    }
+ }
 
+ imprimirCadaUnSegundo ()
