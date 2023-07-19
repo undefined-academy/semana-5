@@ -6,11 +6,69 @@
 4. Imprime el nombre completo y el promedio de calificaciones de cada estudiante utilizando Template literals.
 
 # Conceptos a tener en cuenta para la resolución de este ejercicio:
-- Template literals
-– Async functions
-- Class 
-- Get
-- Set
+
+- **Class**: Las clases, introducidas en ECMAScript 2015, son una mejora sintatica sobre la *herencia* basada en *prototipos*. La sintaxis de las clases NO introduce un nuevo modelo de herencia orientada a objetos. Sino, las clases en este lenguaje, proveen una sintaxis mucho mas clara y simple de crear objetos y lidiar con la herencia. 
+    Las clases son "funciones especiales", como las expresiones de funciones y declaraciones de funciones, la sintaxis de una clase tiene dos componentes (el primero de ellos es que el se utilizo para el ejercicio): 
+    - **declaraciones de clases**: Para declarar una clase, se utiliza la palabra reservada ```class``` y el ```Name``` de la misma, que como convención se comienza con mayúsculas. A diferencia de las expresiones de clases, la declaración no permite que una clase existente sea declarada de nuevo y en caso de hacerse, lanzará un error.
+     #### Cuerpo de la clase y definición de métodos:
+    - **constructor**: Las declaraciones de clases utilizan el método ```constructor``` para crear e inicializar un objeto creado con una ```clase```. Solo puede haber un metodo especial con el nombre "constructor" en una clase. Este método, será quien recibe los argumentos que luego seran los valores que obtendrá el constructor cuando sea cree una nueva instancia de la clase.
+        ### Sintaxis con ejemplo del ejercicio:
+        ```
+       class Student {
+            #name;
+            #lastname;
+            constructor(name, lastname) {
+                this.#name = name;
+                this.#lastname = lastname;
+                }
+            get fullName () {
+            return `${this.#name} ${this.#lastname}`;
+            }
+            static fromObject(obj) {
+            return new Student(obj.name, obj.lastname);
+            }  
+
+        }
+        ````
+    - **expresiones de clases**: Estas pueden ser nombradas o no. Si se nombran el nombre de la clase es local sólo en el cuerpo de la clase.
+        ### Sintaxis
+        ````
+        let MyClass = class [className] [extends] {
+            //class body
+        };
+        ````
+- **'#' Campos privados**: Las propiedades de las clases son públicas de forma predeterminada y se pueden ver y modificar fuera de la clase. Pero existe el prefijo hash ```#``` que los define como campos privados y son accesibles en el *constuctor de clases* desde dentro de la propia *declaración de clases*.  Entonces, de la única manera que se puede acceder a ellos, es como se muestra en el ejercicio, a través del *get* ```fullName```.
+
+- **This**: En general, el valor de *this* está determinado por cómo se invoca a la función. No puede ser establecida mediante una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada. Tiene distintos tipos de contextos: Global binding, Implicit binding, Explicit binding, New binding.
+
+    - En el caso del ejercicio se utiliza como un *constructor* (con la palabra clave new), entonces su *this* es enlazado al nuevo objeto en construcción, dandole valores a los campos privados #name y #lastname.
+
+- **Get**: Enlaza la propiedad de un objeto con una función que será llamada cuando la propiedad es buscada. Este se encargará de recibir un valor. Y servirá para acceder a los campos privados.
+    ### Sintaxis
+        ```
+        { get prop(){...} }    
+        ```
+
+- **static**: Los métodos estaticos son llamados sin instanciar su clase y son habitualmente utilizados para crear funciones para una aplicación. Es decir, este se puede utilizar sin necesidad de instanciar una clase. En el caso del ejericio se utilizó para implementar el objeto *fromObject*:
+    - **fromObject** =>  toma el objeto Student, extrae las propiedades name y lastname, y crea una nueva instancia de la clase Student con esos valores. 
+
+- **map**: Este método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos. En el ejercicio se esta utilizando para que itere por cada elemento del array que recibe la funcion asincronica en la que esta envuelta.
+
+- **reduce**: el método *reduce()* ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor.
+    La función reductora recibe cuatro argumentos:
+        Acumulador (acum)
+        Valor Actual (score)
+        Índice Actual (idx)
+        Array (src)
+        Y el valor inicial (0)
+    El valor devuelto de la función reductora se asigna al acumulador, cuyo valor se recuerda en cada iteración de la matriz y, en última instancia, se convierte en el valor final, único y resultante.
+
+    ### Sintaxis
+    ````
+    arr.reduce(callback(acumulador, valorActual[, índice[, array]])[, valorInicial])
+    ````
+- **toFixed**: Este método se aplica al promedio para redondear el resultado a dos decimales, asegurándose de que tenga un máximo de dos lugares después del punto decimal. 
+
 
 ---------------------------------------------------------------------------------------------------
 ## Ejercicio 2 📚
@@ -108,7 +166,7 @@ main();
 
 
 ```
-El clousure en este caso recordara la referencia que guarda la variable *i* en ese momento del ciclo for.
+El clousure en este caso recordara la referencia que guarda la variable *i* en ese momento del ciclo for. Es decir, que el *i* que recibe como parametro
 
 ----------------------------------------------------------------------------------------------------
 ## Ejercicio 4 📚
@@ -126,3 +184,10 @@ const emails = [
 ```
 
 # Conceptos a tener en cuenta para la resolución de este ejercicio:
+
+- **Regex** => *expresión regular*: reune una secuencia de caracteristicas, las cuales definen un patrón de busqueda, principalmente para usar en operaciones de busqueda y coincidencia de texto. En otras palabras, sirve para validar que un texto cumple ciertas caracteristicas, por ejemplo, la validación de la construcción de un e-mail. 
+    - *JavaScript* proporciona la clase **RegExp** para crear y manipular objetos de expresiones regulares, así como métodos en la clase String que pueden utilzarse en combinación con expresiones regulares, como: *match(), search(), replace(), y split()*
+    - **replace**: Cambiar partes de una cadena de texto que coinciden con un patrón por otra cadena de texto. 
+    - **test()**: Este método va a ejecutar la búsqueda de una ocurrencia entre una *expresión regular* y una *cadena mencionada*. Devolverá *true or false*.
+**filter()**: creará un nuevo arreglo con todos los elementos que cumplen la condición implementada por la función dada.
+**map()**: Este método crea una nueva matriz con los resultados de llamar a una función proporcionada en cada elemento de la matriz que llama.
